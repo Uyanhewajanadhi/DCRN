@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore")
 def train(cfg):
     save_model_path = os.path.dirname(cfg['save_model_file'])
     if not os.path.exists(save_model_path):
-        os.mkdir(save_model_path)
+        os.mkdirs(save_model_path)
 
     # tensorboard
     writer = SummaryWriter("tensorboard/"+cfg['name'])
